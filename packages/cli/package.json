@@ -10,7 +10,9 @@
     "dev": "tsc -p . --watch"
   },
   "type": "module",
-  "bin": "./dist/index.js",
+  "bin": {
+    "apifox-ct": "./dist/index.js"
+  },
   "dependencies": {
     "@apifox-codegen-transformer/core": "workspace:*",
     "execa": "^8.0.1",

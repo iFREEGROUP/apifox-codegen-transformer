@@ -11,7 +11,12 @@ export async function run(argv: string[]) {
       'parse-positional-numbers': false,
     })
     .usage('Usage: $0 [file]')
-    .boolean('clipboard')
+    .option('clipboard', {
+      type: 'boolean',
+      description:
+        'read code from clipboard then write back to clipboard after transformation',
+    })
+    .scriptName('apifox-ct')
     .help()
     .version()
     .parse()
