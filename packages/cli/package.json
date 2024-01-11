@@ -1,0 +1,18 @@
+{
+  "name": "@apifox-codegen-transformer/cli",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [],
+  "author": "Pig Fang <g-plane@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p .",
+    "dev": "tsc -p . --watch"
+  },
+  "type": "module",
+  "bin": "./dist/cli.js",
+  "dependencies": {
+    "@apifox-codegen-transformer/core": "workspace:*",
+    "get-stdin": "^9.0.0"
+  }
+}

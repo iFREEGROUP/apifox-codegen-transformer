@@ -1,0 +1,18 @@
+{
+  "name": "apifox-codegen-transformer",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [],
+  "author": "Pig Fang <g-plane@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm -r build",
+    "fmt": "dprint fmt",
+    "fmt:check": "dprint check"
+  },
+  "devDependencies": {
+    "@gplane/tsconfig": "^6.1.0",
+    "dprint": "^0.45.0",
+    "typescript": "^5.3.3"
+  }
+}

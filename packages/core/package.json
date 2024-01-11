@@ -1,0 +1,24 @@
+{
+  "name": "@apifox-codegen-transformer/core",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [],
+  "author": "Pig Fang <g-plane@hotmail.com>",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p .",
+    "dev": "tsc -p . --watch"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "dependencies": {
+    "@babel/parser": "^7.23.6",
+    "recast": "0.21.1"
+  }
+}
