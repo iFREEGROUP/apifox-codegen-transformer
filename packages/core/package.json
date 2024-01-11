@@ -1,7 +1,6 @@
 {
   "name": "@apifox-codegen-transformer/core",
   "version": "0.0.0",
-  "private": true,
   "keywords": [],
   "author": "Pig Fang <g-plane@hotmail.com>",
   "license": "MIT",
