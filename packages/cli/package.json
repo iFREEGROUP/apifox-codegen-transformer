@@ -10,9 +10,14 @@
     "dev": "tsc -p . --watch"
   },
   "type": "module",
-  "bin": "./dist/cli.js",
+  "bin": "./dist/index.js",
   "dependencies": {
     "@apifox-codegen-transformer/core": "workspace:*",
-    "get-stdin": "^9.0.0"
+    "get-stdin": "^9.0.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.8",
+    "@types/yargs": "^17.0.32"
   }
 }
