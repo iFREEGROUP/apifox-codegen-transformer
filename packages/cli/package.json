@@ -9,6 +9,9 @@
     "dev": "tsc -p . --watch"
   },
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "bin": {
     "apifox-ct": "./dist/index.js"
   },

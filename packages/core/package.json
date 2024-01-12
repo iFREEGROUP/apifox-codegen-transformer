@@ -9,6 +9,9 @@
     "build": "tsc -p .",
     "dev": "tsc -p . --watch"
   },
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "exports": {
     ".": {
