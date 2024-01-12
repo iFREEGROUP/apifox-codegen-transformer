@@ -1,7 +1,6 @@
 {
   "name": "@ifreegroup/apifox-codegen-transformer-core",
-  "version": "0.1.0",
-  "keywords": [],
+  "version": "0.1.1",
   "author": "Pig Fang <g-plane@hotmail.com>",
   "license": "MIT",
   "repository": {
