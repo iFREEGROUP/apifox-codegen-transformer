@@ -20,7 +20,7 @@ importers:
 
   packages/cli:
     dependencies:
-      '@apifox-codegen-transformer/core':
+      '@ifreegroup/apifox-codegen-transformer-core':
         specifier: workspace:*
         version: link:../core
       execa:

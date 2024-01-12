@@ -1,5 +1,5 @@
 {
-  "name": "@apifox-codegen-transformer/cli",
+  "name": "@ifreegroup/apifox-codegen-transformer-cli",
   "version": "0.1.0",
   "keywords": [],
   "author": "Pig Fang <g-plane@hotmail.com>",
@@ -20,7 +20,7 @@
     "apifox-ct": "./dist/index.js"
   },
   "dependencies": {
-    "@apifox-codegen-transformer/core": "workspace:*",
+    "@ifreegroup/apifox-codegen-transformer-core": "workspace:*",
     "execa": "^8.0.1",
     "get-stdin": "^9.0.0",
     "yargs": "^17.7.2"

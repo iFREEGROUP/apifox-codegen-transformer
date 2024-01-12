@@ -1,4 +1,4 @@
-import { transform } from '@apifox-codegen-transformer/core'
+import { transform } from '@ifreegroup/apifox-codegen-transformer-core'
 import getStdin from 'get-stdin'
 import * as fs from 'node:fs/promises'
 import * as process from 'node:process'
@@ -25,8 +25,8 @@ export async function run(argv: string[]) {
   const source = file
     ? await fs.readFile(file, 'utf8')
     : clipboard
-    ? await cb.read()
-    : await getStdin()
+      ? await cb.read()
+      : await getStdin()
   const output = transform(source)
 
   if (clipboard) {
