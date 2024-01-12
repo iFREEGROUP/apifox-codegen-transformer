@@ -5,6 +5,10 @@
   "keywords": [],
   "author": "Pig Fang <g-plane@hotmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iFREEGROUP/apifox-codegen-transformer.git"
+  },
   "scripts": {
     "build": "pnpm -r build",
     "fmt": "dprint fmt",
