@@ -4,6 +4,10 @@
   "keywords": [],
   "author": "Pig Fang <g-plane@hotmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iFREEGROUP/apifox-codegen-transformer.git"
+  },
   "sideEffects": false,
   "scripts": {
     "build": "tsc -p .",
