@@ -1,6 +1,6 @@
 {
   "name": "@apifox-codegen-transformer/cli",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "keywords": [],
   "author": "Pig Fang <g-plane@hotmail.com>",
   "license": "MIT",
