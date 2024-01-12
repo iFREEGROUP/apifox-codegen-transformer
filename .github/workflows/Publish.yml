@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '21.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@apifox-codegen-transformer'
+          scope: '@ifreegroup'
       - uses: pnpm/action-setup@v2
         with:
           version: 8
