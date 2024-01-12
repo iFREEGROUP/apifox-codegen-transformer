@@ -7,7 +7,8 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsc -p .",
-    "dev": "tsc -p . --watch"
+    "dev": "tsc -p . --watch",
+    "test": "vitest"
   },
   "files": [
     "dist"
@@ -22,5 +23,9 @@
   "dependencies": {
     "@babel/parser": "^7.23.6",
     "recast": "0.21.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.11",
+    "vitest": "^1.1.3"
   }
 }

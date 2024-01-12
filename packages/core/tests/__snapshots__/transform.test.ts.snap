@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`basic transformation 1`] = `
+"
+export type T1 = {
+ field1: string,
+ field2: number
+}
+
+export type T2 = {
+ field3: string,
+ field4: number
+}
+"
+`;
