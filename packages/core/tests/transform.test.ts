@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { transform } from '../src'
+import { transform } from '../src/index.js'
 
 test('basic transformation', () => {
   const output = transform(`
