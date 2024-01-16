@@ -13,8 +13,7 @@ export async function run(argv: string[]) {
     .usage('Usage: $0 [file]')
     .option('clipboard', {
       type: 'boolean',
-      description:
-        'read code from clipboard then write back to clipboard after transformation',
+      description: 'read code from clipboard then write back to clipboard after transformation',
     })
     .scriptName('apifox-ct')
     .help()
@@ -25,8 +24,8 @@ export async function run(argv: string[]) {
   const source = file
     ? await fs.readFile(file, 'utf8')
     : clipboard
-      ? await cb.read()
-      : await getStdin()
+    ? await cb.read()
+    : await getStdin()
   const output = transform(source)
 
   if (clipboard) {
