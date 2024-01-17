@@ -6,7 +6,7 @@ import yargs from 'yargs'
 import * as cb from './clipboard.js'
 
 export async function run(argv: string[]) {
-  const { _: files, clipboard } = await yargs(argv)
+  const { _: files, clipboard, optionalToUndefined } = await yargs(argv)
     .parserConfiguration({
       'parse-positional-numbers': false,
     })
@@ -14,6 +14,10 @@ export async function run(argv: string[]) {
     .option('clipboard', {
       type: 'boolean',
       description: 'read code from clipboard then write back to clipboard after transformation',
+    })
+    .option('optional-to-undefined', {
+      type: 'boolean',
+      description: 'convert optional properties to `T | undefined`',
     })
     .scriptName('apifox-ct')
     .help()
@@ -24,9 +28,9 @@ export async function run(argv: string[]) {
   const source = file
     ? await fs.readFile(file, 'utf8')
     : clipboard
-    ? await cb.read()
-    : await getStdin()
-  const output = transform(source)
+      ? await cb.read()
+      : await getStdin()
+  const output = transform(source, { optionalToUndefined })
 
   if (clipboard) {
     await cb.write(output)

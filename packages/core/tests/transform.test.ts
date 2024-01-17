@@ -46,3 +46,17 @@ export type T1 = {
 `)
   expect(output).toMatchSnapshot()
 })
+
+test('convert optional properties to `undefined`', () => {
+  const output = transform(
+    `
+export type T1 = {
+    field1?: string;
+    field2?: number;
+    [property: string]: any;
+}
+`,
+    { optionalToUndefined: true }
+  )
+  expect(output).toMatchSnapshot()
+})

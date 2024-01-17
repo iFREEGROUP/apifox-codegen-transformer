@@ -14,6 +14,15 @@ export type T2 = {
 "
 `;
 
+exports[`convert optional properties to \`undefined\` 1`] = `
+"
+export type T1 = {
+    field1: string | undefined,
+    field2: number | undefined
+}
+"
+`;
+
 exports[`optional properties with comments 1`] = `
 "
 export type T1 = {
