@@ -13,3 +13,12 @@ export type T2 = {
 }
 "
 `;
+
+exports[`optional properties with comments 1`] = `
+"
+export type T1 = {
+ field1?: string,
+ field2?: number
+}
+"
+`;

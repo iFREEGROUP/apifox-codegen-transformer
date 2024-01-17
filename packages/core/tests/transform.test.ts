@@ -29,3 +29,20 @@ export type T2 = {
 `)
   expect(output).toMatchSnapshot()
 })
+
+test('optional properties with comments', () => {
+  const output = transform(`
+export type T1 = {
+    /**
+     * field1
+     */
+    field1?: string;
+    /**
+     * field2
+     */
+    field2?: number;
+    [property: string]: any;
+}
+`)
+  expect(output).toMatchSnapshot()
+})

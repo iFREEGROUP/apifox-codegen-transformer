@@ -5,9 +5,9 @@ export function transform(source: string): string {
   const ast = recast.parse(source, { parser })
 
   recast.visit(ast, {
-    visitComment(path) {
-      path.prune()
-      return false
+    visitTSPropertySignature(path) {
+      path.node.comments = []
+      this.traverse(path)
     },
     visitTSIndexSignature(path) {
       path.prune()
