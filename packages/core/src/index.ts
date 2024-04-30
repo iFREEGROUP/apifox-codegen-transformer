@@ -1,3 +1,4 @@
+import { uniqWith } from 'lodash-es'
 import * as recast from 'recast'
 import * as parser from 'recast/parsers/typescript.js'
 
@@ -34,7 +35,25 @@ export function transform(source: string, options: Options = {}): string {
       path.prune()
       return false
     },
+    visitTSUnionType(path) {
+      this.traverse(path)
+
+      const { node } = path
+      node.types = uniqWith(node.types, (a, b) => {
+        const stringifiedA = stringifyTypeName(a)
+        const stringifiedB = stringifyTypeName(b)
+        return !!stringifiedA && !!stringifiedB && stringifiedA === stringifiedB
+      })
+    },
   })
 
   return recast.print(ast).code
+}
+
+function stringifyTypeName(node: recast.types.ASTNode) {
+  if (n.TSTypeReference.check(node) && !node.typeParameters && n.Identifier.check(node.typeName)) {
+    return node.typeName.name
+  } else if (node.type.startsWith('TS') && node.type.endsWith('Keyword')) {
+    return node.type.slice(2, -7).toLowerCase()
+  }
 }
